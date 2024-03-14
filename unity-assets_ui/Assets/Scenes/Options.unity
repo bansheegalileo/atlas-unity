@@ -689,6 +689,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1323251771}
+  - {fileID: 2105645807}
   - {fileID: 1042520824}
   - {fileID: 819951287}
   - {fileID: 1944728132}
@@ -1620,8 +1622,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2105645807}
-  - {fileID: 1323251771}
   - {fileID: 1027124046}
   - {fileID: 699224427}
   m_Father: {fileID: 611842827}
@@ -2563,7 +2563,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1042520824}
+    m_TransformParent: {fileID: 611842827}
     m_Modifications:
     - target: {fileID: 495054606302065458, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
       propertyPath: m_Name
@@ -2700,7 +2700,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1042520824}
+    m_TransformParent: {fileID: 611842827}
     m_Modifications:
     - target: {fileID: 4111643878574245498, guid: 893733aa5aa7c154d9dbe9c44c339513, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
