@@ -14370,6 +14370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 771241271}
+  finalTimeText: {fileID: 0}
 --- !u!1001 &1966025253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14636,9 +14637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerScript: {fileID: 1958569633}
-  winText: {fileID: 771241271}
-  increasedFontSize: 60
-  winColor: {r: 0, g: 1, b: 0, a: 1}
+  winCanvas: {fileID: 0}
 --- !u!1 &1999548108 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5364133974941581466, guid: fafb4a6060a6ca64286accc866d679c9, type: 3}
@@ -15724,6 +15723,10 @@ PrefabInstance:
     - target: {fileID: 5588746634084818215, guid: a32785d3656c1884f99a97a79a9581ae, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588746634084818215, guid: a32785d3656c1884f99a97a79a9581ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5943821071843529665, guid: a32785d3656c1884f99a97a79a9581ae, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
