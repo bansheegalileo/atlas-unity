@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073920473068442592, guid: 670df1fdd078c2a489c58087c8aeaaa2, type: 3}
       propertyPath: m_Name
-      value: ApplyButton Variant
+      value: ApplyButton
       objectReference: {fileID: 0}
     - target: {fileID: 5791231325673564150, guid: 670df1fdd078c2a489c58087c8aeaaa2, type: 3}
       propertyPath: m_text
