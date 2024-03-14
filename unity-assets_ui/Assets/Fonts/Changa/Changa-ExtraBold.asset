@@ -6,7 +6,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Changa-ExtraBold SDF Atlas
+  m_Name: Changa-ExtraBold Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Changa-ExtraBold
   m_EditorClassIdentifier: 
-  hashCode: -24509375
+  hashCode: 1035380592
   material: {fileID: 1121122862905630418}
-  materialHashCode: -2122286655
+  materialHashCode: -651200560
   m_Version: 1.1.0
   m_SourceFontFileGUID: f6723eecfacf38b40b4a09f34ac08fc2
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: f6723eecfacf38b40b4a09f34ac08fc2, type: 3}
@@ -2626,16 +2626,16 @@ MonoBehaviour:
   m_FallbackFontAssetTable: []
   m_CreationSettings:
     sourceFontFileName: 
-    sourceFontFileGUID: f6723eecfacf38b40b4a09f34ac08fc2
+    sourceFontFileGUID: 87810a5b1e0f1c64eb49fbd45d08b4d6
     pointSizeSamplingMode: 0
     pointSize: 71
     padding: 5
     packingMode: 0
     atlasWidth: 512
     atlasHeight: 512
-    characterSetSelectionMode: 0
-    characterSequence: 32 - 126, 160, 8203, 8230, 9633
-    referencedFontAssetGUID: 
+    characterSetSelectionMode: 6
+    characterSequence: 20-7E,A0,2026
+    referencedFontAssetGUID: 14406a7a04cb45f4c8d9235b50e08960
     referencedTextAssetGUID: 
     fontStyle: 0
     fontStyleModifier: 0
