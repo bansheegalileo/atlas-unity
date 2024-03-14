@@ -19,7 +19,7 @@ public class WinTrigger : MonoBehaviour
     {
         if (timerScript != null)
         {
-            timerScript.enabled = false;
+            timerScript.Win();
         }
 
         if (winCanvas != null)

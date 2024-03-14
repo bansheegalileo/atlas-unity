@@ -7,9 +7,11 @@ public class CameraController : MonoBehaviour
 
     private float rotationX = 0f;
     public PauseMenu pauseMenu; 
+    public bool isInverted = false;
 
 private void Start()
 {
+    LoadSettings();
     if (pauseMenu != null)
     {
         if (!pauseMenu.isPaused)
@@ -38,11 +40,20 @@ private void Start()
             FollowPlayer();
         }
     }
+    private void LoadSettings()
+    {
+        isInverted = PlayerPrefs.GetInt("InvertYAxis", 0) == 1;
+    }
 
     private void RotateCamera()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+
+        if (isInverted)
+        {
+            mouseY *= -1;
+        }
 
         player.Rotate(Vector3.up, mouseX, Space.World);
 

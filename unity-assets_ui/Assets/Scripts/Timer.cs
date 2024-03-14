@@ -4,19 +4,19 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
+    public GameObject winCanvas;
     public TMP_Text finalTimeText;
 
-    private float startTime;
-    private bool finished = false;
+    private float timer;
 
     private void Start()
     {
-        startTime = Time.time;
+        timer = 0f;
     }
 
     private void Update()
     {
-        if (!finished)
+        if (enabled)
         {
             UpdateTimer();
         }
@@ -24,16 +24,21 @@ public class Timer : MonoBehaviour
 
     private void UpdateTimer()
     {
-        float t = Time.time - startTime;
-        string minutes = Mathf.Floor(t / 60).ToString("00");
-        string seconds = (t % 60).ToString("00.00");
+        timer += Time.deltaTime;
+
+        string minutes = Mathf.Floor(timer / 60).ToString("00");
+        string seconds = (timer % 60).ToString("00.00");
 
         timerText.text = $"{minutes}:{seconds}";
     }
 
     public void Win()
     {
-        finished = true;
-        finalTimeText.text = timerText.text;
+        string minutes = Mathf.Floor(timer / 60).ToString("00");
+        string seconds = (timer % 60).ToString("00.00");
+
+        finalTimeText.text = $"{minutes}:{seconds}";
+
+        enabled = false;
     }
 }

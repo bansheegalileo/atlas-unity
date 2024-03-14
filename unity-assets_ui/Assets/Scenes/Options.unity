@@ -519,8 +519,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BGM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
-  m_sharedMaterial: {fileID: -7593600843588790619, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
+  m_sharedMaterial: {fileID: 5918920170566905359, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -712,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f45c16b78752cb44b44e661cfd4aa03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InvertYToggle: {fileID: 1464588717}
 --- !u!1 &674717175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,8 +1073,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Invert Y-Axis
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
-  m_sharedMaterial: {fileID: -7593600843588790619, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
+  m_sharedMaterial: {fileID: 5918920170566905359, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1694,8 +1695,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SFX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
-  m_sharedMaterial: {fileID: -7593600843588790619, guid: 6784074d860de43448bbd4ce365aa916, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
+  m_sharedMaterial: {fileID: 5918920170566905359, guid: 41e166532d7df634da84adc7450f11b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1853,7 +1854,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 611842828}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1613177361
 GameObject:
@@ -2170,8 +2183,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 14406a7a04cb45f4c8d9235b50e08960, type: 2}
-  m_sharedMaterial: {fileID: 1121122862905630418, guid: 14406a7a04cb45f4c8d9235b50e08960, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8285776f45127a54494059ff0ca041ce, type: 2}
+  m_sharedMaterial: {fileID: -5370642882679487678, guid: 8285776f45127a54494059ff0ca041ce, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2557,6 +2570,34 @@ PrefabInstance:
     - target: {fileID: 495054606302065458, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
       propertyPath: m_Name
       value: ApplyButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 611842828}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395652337610597834, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4410780957429903586, guid: f453038c05ce7d24ab18e04394f16143, type: 3}
       propertyPath: m_Pivot.x

@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
-        Resume();
+        PlayerPrefs.SetInt("ActivatePauseMenu", 0);
     }
 
     public void Options()
