@@ -5504,7 +5504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &692862035
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10774,7 +10774,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1446215304
 Animator:
   serializedVersion: 5
@@ -15724,7 +15724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5843079748887842585, guid: df0a4aaa29216dd42bf06458469e9f31, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5896814619600149857, guid: df0a4aaa29216dd42bf06458469e9f31, type: 3}
       propertyPath: m_Pivot.x
