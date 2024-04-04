@@ -4,10 +4,10 @@ public class CameraController : MonoBehaviour
 {
     public Transform player;
     public float sensitivity = 2f;
-    public float distanceFromPlayer = 5f; // Distance between camera and player
+    public float distanceFromPlayer = 5f;
 
     private float rotationX = 0f;
-    private float rotationY = 0f; // Added rotationY for vertical camera movement
+    private float rotationY = 0f;
     public PauseMenu pauseMenu;
     public bool isInverted = false;
 
@@ -30,11 +30,9 @@ public class CameraController : MonoBehaviour
 
         if (player != null)
         {
-            // Set initial camera position relative to player
             Vector3 offset = -player.forward * distanceFromPlayer;
             transform.position = player.position + offset;
 
-            // Look at the player
             transform.LookAt(player);
         }
     }
@@ -63,11 +61,10 @@ public class CameraController : MonoBehaviour
             mouseY *= -1;
         }
 
-        rotationX += mouseX; // Added mouseX to rotationX
-        rotationY -= mouseY; // Subtract mouseY from rotationY to invert vertical camera movement
+        rotationX += mouseX;
+        rotationY -= mouseY;
         rotationY = Mathf.Clamp(rotationY, -90f, 90f);
 
-        // Rotate camera around player based on rotationX and rotationY
         Quaternion rotation = Quaternion.Euler(rotationY, rotationX, 0f);
         Vector3 offset = rotation * new Vector3(0f, 0f, -distanceFromPlayer);
         transform.position = player.position + offset;

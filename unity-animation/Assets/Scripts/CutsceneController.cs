@@ -12,7 +12,7 @@ public class CutsceneController : MonoBehaviour
     void Start()
     {
         mainCamera.SetActive(false);
-        playerController.enabled = false; // Disable PlayerController component
+        playerController.enabled = false;
         timerCanvas.SetActive(false);
     }
 
