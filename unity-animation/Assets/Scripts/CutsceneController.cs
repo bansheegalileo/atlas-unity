@@ -4,26 +4,33 @@ public class CutsceneController : MonoBehaviour
 {
     public Animator cutsceneAnimator;
     public GameObject mainCamera;
-    public GameObject player;
+    public PlayerController playerController;
     public GameObject timerCanvas;
-    public GameObject cutsceneCamera;
-
 
     private bool cutsceneFinished = false;
 
-    private void Update()
+    void Start()
     {
-        if (cutsceneAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && !cutsceneFinished)
+        mainCamera.SetActive(false);
+        playerController.enabled = false; // Disable PlayerController component
+        timerCanvas.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (!cutsceneFinished && cutsceneAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 && !cutsceneAnimator.IsInTransition(0))
         {
             EndCutscene();
-            cutsceneFinished = true;
         }
     }
 
     private void EndCutscene()
     {
-        player.GetComponent<PlayerController>().enabled = true;
+        mainCamera.SetActive(true);
+        playerController.enabled = true;
         timerCanvas.SetActive(true);
         gameObject.SetActive(false);
+        cutsceneFinished = true;
+        enabled = false;
     }
 }
