@@ -69,7 +69,10 @@
     <Compile Include="Assets\Scripts\CutsceneController.cs" />
     <Compile Include="Assets\Scripts\PlayerAnim.cs" />
     <Compile Include="Assets\Scripts\reset.cs" />
+    <Compile Include="Assets\Scripts\Thump.cs" />
+    <Compile Include="Assets\Scripts\MuMan.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Fade.cs" />
     <Compile Include="Assets\Scripts\WinTrigger.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />

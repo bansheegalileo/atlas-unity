@@ -5,6 +5,8 @@ public class PlayerAnim : MonoBehaviour
     private Animator animator;
     private CharacterController characterController;
     private bool isFalling = false;
+    public AudioSource Foots;
+    public AudioSource Thump;
 
     private void Start()
     {
@@ -16,12 +18,20 @@ public class PlayerAnim : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        bool isMoving = (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f);
+        bool isMoving = Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f;
 
         animator.SetBool("IsMoving", isMoving);
 
         bool isGrounded = characterController.isGrounded;
         animator.SetBool("IsGrounded", isGrounded);
+
+        if (isGrounded && isMoving)
+        {
+            if (!Foots.isPlaying)
+            {
+                Foots.Play();
+            }
+        }
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
@@ -42,5 +52,13 @@ public class PlayerAnim : MonoBehaviour
     public void OnFallingAnimationComplete()
     {
         isFalling = false;
+    }
+
+    public void PlayThumpSound()
+    {
+        if (Thump != null)
+        {
+            Thump.Play();
+        }
     }
 }

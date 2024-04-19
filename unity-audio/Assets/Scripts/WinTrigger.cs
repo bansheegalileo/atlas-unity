@@ -6,12 +6,15 @@ public class WinTrigger : MonoBehaviour
     public GameObject winCanvas;
 
     private bool hasPlayerWon = false;
+    public MuMan muMan;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !hasPlayerWon)
         {
             WinGame();
+            muMan.StopBGM();
+            muMan.Winsong();
         }
     }
 

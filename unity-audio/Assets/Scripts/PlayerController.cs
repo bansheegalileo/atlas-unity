@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection;
     private Vector3 startPosition;
+    public PauseMenu pauseMenu;
 
     private void Start()
     {
@@ -29,6 +30,11 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(horizontalMovement, 0f, verticalMovement);
         movement = transform.TransformDirection(movement);
         movement *= moveSpeed * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            pauseMenu.MainMenu();
+        }
 
         if (movement.magnitude > 0)
         {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -7,7 +8,9 @@ public class PauseMenu : MonoBehaviour
     public GameObject cameraControllerObject;
     private CameraController cameraController;
     public bool isPaused = false;
-
+    public MuMan muMan;
+    public AudioMixerSnapshot normalSnapshot;
+    public AudioMixerSnapshot muffledSnapshot;
 
     void Start()
     {   
@@ -37,6 +40,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
+        muffledSnapshot.TransitionTo(0f);
         Time.timeScale = 0f;
         pauseCanvas.SetActive(true);
         cameraController.enabled = false;
@@ -50,6 +54,7 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(false);
         cameraController.enabled = true;
         Cursor.visible = false;
+        normalSnapshot.TransitionTo(0f);
     }
 
     public void Restart()
@@ -57,6 +62,7 @@ public class PauseMenu : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
         PlayerPrefs.SetInt("ActivatePauseMenu", 0);
+        normalSnapshot.TransitionTo(0.5f);
     }
 
     public void Options()
@@ -68,6 +74,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        muMan.StopBGM();
         SceneManager.LoadScene("MainMenu");
     }
 }

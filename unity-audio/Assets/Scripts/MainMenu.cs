@@ -1,8 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioMixer mixer;
+    private const string BGMVolumeKey = "BGMVolume";
+    private float defaultBGMVolume = 0.8f;
+    private void Start()
+    {
+        float savedBGMVolume = PlayerPrefs.GetFloat(BGMVolumeKey, defaultBGMVolume);
+        ApplyBGMVolume(savedBGMVolume);
+    }
     public void LevelSelect(int level)
     {
         PlayerPrefs.SetInt("ActivatePauseMenu", 0);
@@ -34,4 +43,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Exited");
     }
+    public void ApplyBGMVolume(float volume)
+    {
+        mixer.SetFloat("BGMVolume", volume);
+    }
 }
+

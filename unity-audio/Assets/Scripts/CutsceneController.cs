@@ -8,12 +8,14 @@ public class CutsceneController : MonoBehaviour
     public GameObject timerCanvas;
 
     private bool cutsceneFinished = false;
+    public MuMan muMan;
 
     void Start()
     {
         mainCamera.SetActive(false);
         playerController.enabled = false;
         timerCanvas.SetActive(false);
+        muMan.StartBGM();
     }
 
     void Update()
