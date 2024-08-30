@@ -4,30 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void LevelSelect(int level)
-    {
-        PlayerPrefs.SetInt("ActivatePauseMenu", 0);
-        switch (level)
-        {
-            case 1:
-                SceneManager.LoadScene("Level01");
-                break;
-            case 2:
-                SceneManager.LoadScene("Level02");
-                break;
-            case 3:
-                SceneManager.LoadScene("Level03");
-                break;
-            default:
-                Debug.LogError("that dont exist");
-                break;
-        }
-    }
 
-    public void Options()
+
+    public void Start()
     {
-        PlayerPrefs.SetString("LastScene", SceneManager.GetActiveScene().name);
-        SceneManager.LoadScene("Options");
+        SceneManager.LoadScene("Game");
     }
 
     public void ExitGame()
