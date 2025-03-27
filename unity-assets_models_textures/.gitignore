@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 [Aa]ssets[Ss]treamingAssetsaa.meta
 [Aa]ssets[Ss]treamingAssetsaa
+
+# Exclude Unity Packages folder (except manifest.json and project-related packages)
+Packages/*
+
+# But keep the Packages/manifest.json and packages-lock.json files
+!Packages/manifest.json
+!Packages/packages-lock.json
