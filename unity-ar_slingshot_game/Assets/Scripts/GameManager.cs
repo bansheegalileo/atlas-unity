@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         OnPlaneSelected += PlaneSelected;
     }
 
-    // called once a drame
+    // called once a frame
     void Update()
     {
         if (Input.touchCount > 0 && selectedPlane == null && planeManager.trackables.count > 0)

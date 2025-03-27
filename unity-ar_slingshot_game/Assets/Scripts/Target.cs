@@ -22,7 +22,7 @@ public class Target : MonoBehaviour
             OnTargetDestroy?.Invoke(ID, Points());
             OnTargetDestroy = null;
             damgeSound.Play();
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
